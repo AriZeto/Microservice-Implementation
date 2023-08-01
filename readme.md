@@ -138,6 +138,11 @@ send_to_server(f"{addition_correct} {subtraction_correct} {multiplication_correc
 
 ### C) UML sequence diagram showing how requesting and receiving data works.
 
+![image](https://i.ibb.co/9hK68JV/Screenshot-2023-07-31-at-8-14-13-PM.png)
+
+Second image link just in case the first fails...:
+
 ![image](https://github.com/AriZeto/microservice/assets/98569819/d5926b0d-ce4e-471c-8090-a4b7b0453c42)
+
 
 
