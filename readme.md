@@ -1,5 +1,17 @@
 ### NECESSARY:
 
+NOTE - VERY IMPORTANT - DO NOT SKIP THIS:
+
+You MUST start up the server before starting the client, otherwise communication will be forbidden.
+
+Ex: 
+
+FIRST) python server.py (the microservice)
+
+then
+
+SECOND) python client.py (your project)
+
 The Microservice is implemented by using sockets as a communication pipeline.
 In order for the server and client to communicate with each other, there are some necessary imports.
 Please include the following at the top of the client file.
