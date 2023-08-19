@@ -13,23 +13,16 @@ import base64 # Necessary for encoding and decoding
 def make_chart(scores_string):
     """
     This function creates and returns a pie chart based on a string provided from the client.
-
     Takes parameter 'scores_string' (string). String is numbers correct and number of answers wrong separated by spaces.
     Ex: 2 (multiplication), 3 (addition), 2 (subtraction), 5 (wrong answers).
-
     Returns a pie chart to the client.
     """
-    # Array containing data per subject area and wrong answers.
-    results_chart = [int(char) for char in scores_string.split() if char.isdigit()]
-
-    # Design Pie Chart
-    labels_chart = 'Addition', 'Subtraction', 'Multiplication', 'Wrong Answers'
-
+    results_chart = [int(char) for char in scores_string.split() if char.isdigit()] # Array containing data per subject area and wrong answers.
+    labels_chart = 'Addition', 'Subtraction', 'Multiplication', 'Wrong Answers'     # Design Pie Chart
     # Display results.
     pie_chart, pie_data = plot.subplots()
     pie_data.pie(results_chart, labels=labels_chart, autopct='%1.1f%%', shadow=True, startangle=90)
     pie_data.axis('equal')
-
     # Returns pie chart (encoded with base64) to client.
     return fig_to_base64(pie_chart)
 
@@ -37,9 +30,7 @@ def make_chart(scores_string):
 def fig_to_base64(fig):
     """
     This method converts the image to base64.
-
     Takes parameter 'fig' - the figure that is returned from 'plot.subplots' from the function, make_chart().
-
     Returns an encoded image of the pie chart.
     """
     my_img = io.BytesIO()
